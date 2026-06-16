@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<title>Salão do Marcola — Agende seu horário</title>
+<meta name="description" content="Salão do Marcola — agende seu horário de forma rápida e prática. Barbearia premium." />
+<meta name="theme-color" content="#0a0a0a" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcode-generator/1.4.4/qrcode.min.js"></script>
+</head>
+<body data-theme="dark">
+  <div class="app" id="app">
+    <!-- Topbar (oculta na home) -->
+    <div class="topbar hidden" id="topbar">
+      <button class="brand-min" onclick="go('home')">
+        <span class="ring">M</span><span>SALÃO DO MARCOLA</span>
+      </button>
+      <div class="topbar-actions">
+        <button class="icon-btn" id="themeBtn" title="Modo claro/escuro" onclick="toggleTheme()">◐</button>
+        <button class="icon-btn" id="adminBtn" title="Administração" onclick="openAdmin()">⚙</button>
+      </div>
+    </div>
+
+    <div id="view"></div>
+
+    <div id="footer"></div>
+  </div>
+
+  <div class="toast-wrap" id="toasts"></div>
+  <div id="modalRoot"></div>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
